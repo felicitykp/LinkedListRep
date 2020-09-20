@@ -102,9 +102,19 @@ public class LinkedList<T> extends AbstractList<T> {
 	public static void main(String[] args) {
 		LinkedList<String> myList = new LinkedList<String>();
 		
-		myList.add("hi");
-		myList.add("hello");
+		myList.add("one");
+		myList.add("two");
+		myList.add("three");
+		myList.add("four");
+		
+		//check if list prints
 		System.out.println(myList);
+		
+		//check size method
+		System.out.println("Linked List has "+ myList.size() + " elements");
+		
+		//check get method
+		System.out.println(myList.get(2));
 	}
 	
 }

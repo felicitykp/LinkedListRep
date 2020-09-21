@@ -84,7 +84,7 @@ public class LinkedList<T> extends AbstractList<T> {
 			current++;
 		}
 		
-		return (T) temp;
+		return temp.info;
 	}
 	
 	//Mr. David's toString -> don't edit
@@ -114,7 +114,7 @@ public class LinkedList<T> extends AbstractList<T> {
 		System.out.println("Linked List has "+ myList.size() + " elements");
 		
 		//check get method
-		System.out.println(myList.get(2).toString()); /// I DONT KNOW :(((( UGHDHUSHGD
+		System.out.println(myList.get(2)); /// I DONT KNOW :(((( UGHDHUSHGD
 	}
 	
 }

@@ -38,6 +38,33 @@ public class LinkedList<T> extends AbstractList<T> {
 		
 		return true;
 	}
+	
+	public boolean addTo(T info, int index) {
+		
+		if (head == null) {
+			head = new Node (info);
+			return true;
+		}
+		
+		Node curr = head;
+		
+		
+		for(int i = 0; i < index-1; i++) {
+			curr = curr.next;
+		}
+		
+		//save next link
+		Node temp = curr.next;
+		
+		//add in node
+		curr.next = new Node(info);
+		
+		//connect it to old link
+		curr.next.next = temp;
+		
+		return true;
+		
+	}
 
 	//removing a node
 	public T remove (int index) { //index must be within our list
@@ -114,7 +141,19 @@ public class LinkedList<T> extends AbstractList<T> {
 		System.out.println("Linked List has "+ myList.size() + " elements");
 		
 		//check get method
-		System.out.println(myList.get(2)); /// I DONT KNOW :(((( UGHDHUSHGD
+		System.out.println(myList.get(2)); 
+		
+		//check remove method
+		myList.remove(2);
+		System.out.println(myList);
+		
+		//check add method
+		myList.add("five");
+		System.out.println(myList);
+		
+		//check addTo method
+		myList.addTo("three", 2);
+		System.out.println(myList);
 	}
 	
 }
